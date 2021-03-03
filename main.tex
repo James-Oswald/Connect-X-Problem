@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+
+\title{Connect S}
+\author{James Oswald}
+\date{March 2021}
+
+\begin{document}
+\maketitle
+\noindent
+$s$ is the number of tiles to connect and is $>1$. $m,n$ are the cols and rows of the board in spaces. If $s$ does not exceed the smaller dimension of the board's size ($\min\{m,n\} \geq s$), than the following equation describes the total possible locations to get connect $s$:
+\[
+\underbracket{\overbracket{(m-s+1)n}^{\text{\normalfont \# Row Locs}}+\overbracket{(n-s+1)m}^{\text{\normalfont \# Col Locs}}}_{\text{\normalfont \# Row and Col Locs}}+\underbracket{2\left(\overbracket{\underbracket{(|m-n|+1)}_{\text{\normalfont \# Central Diags}}\underbracket{(\min\{m,n\}-s+1)}_{\text{\normalfont \# Locs in each central diag}}}^{\text{\normalfont \# Central Diagonal Locs}} + \overbracket{2 *\sum_{i = 1}^{\min\{m,n\}-s}i}^{\text{\normalfont \# Side Diagonal Locs}}\right)}_{\text{\normalfont \# Diagonal Locs}}
+\]
+\end{document}
